@@ -1,0 +1,169 @@
+﻿Exemple de feature :
+
+
+Feature: Product basket
+ In order to buy products
+ As a customer
+ I need to be able to put interesting products into a basket
+
+ Rules:
+ - VAT is 20%
+ - Delivery for basket under £10 is £3
+ - Delivery for basket over £10 is £2
+
+ Scenario: Buying a single product under £10
+   Given there is a "Sith Lord Lightsaber", which costs £5
+   When I add the "Sith Lord Lightsaber" to the basket
+   Then I should have 1 product in the basket
+   And the overall basket price should be £9
+
+
+
+
+USER / LOGIN 
+Feature: user login
+Connect to the shop when i have an account
+Scenario: Connect to the home page
+Given i’m on the “/login.php” page
+When I fill the email field with test@test.com
+And I fill the password field with 1234
+Then I press the submit button
+And I should see “welcome page”
+
+
+Feature: user create
+Create a account
+Scenario: create a user
+Given i’m on the “/user/create.php” page
+When I fill the email field with test@test.com
+And I fill the firstname field with Bob
+And I fill the lastname field with TESTNAME
+And I fill the password field with pass1234
+And I fill the password_confirm field with pass1234
+Then I press the submit button
+And I should see “welcome page”
+And a new user is added into the database
+
+
+Feature: user edit 
+Edit my account
+Scenario: edit a user
+Given i’m on the “/user/edit.php” page
+when I fill the firstname field with BobEDIT
+And I fill the lastname field with TESTNAMEEDIT
+And I fill the new_password field with pass1234
+And I fill the new_password_confirm field with pass1234
+Then I press the submit button
+And I should see “user_info update”
+And the user has been updated into the database
+
+
+Feature: user delete
+Rules: being connected as an admin user
+delete a user
+Scenario: delete a user
+Given i’m on the “user/delete.php” page
+when I see a list of all the users
+And I select the radio button for the test user 
+Then I press the submit button
+And I should see “user_delete”
+And the user is delete from the database
+
+
+BASKET
+Feature: Book basket
+In order to buy a book
+As a customer
+I need to be able to put interesting books into a basket
+
+Scenario: Buying a single book
+Given there is a link for Booktitre1 which costs 5 €
+When I add the this book to the basket
+Then I should have 1 book in the basket
+And the overall basket price should be £9
+And the Booktitre1 quantity should be N-1
+
+
+
+
+
+
+BOOK :
+
+
+1. Feature: Book list from library
+        In order to see the list of books from library
+        As a admin user
+        I need to be able to see the list of all the books in our library
+
+
+Rules:
+- Being connected as an admin user
+
+
+Scenario: user admin access book list
+Given there is an admin user connected
+And the admin is on the page /list.php
+Then I should have the book list
+
+
+2. Feature: add book to library
+        In order to add books to library
+        As a admin user
+        I need to be able to create a new book 
+
+
+Rules:
+- Being connected as an admin user
+- Description if null will be “no description for this book yet”
+- If book’s name already exist add error message “Book already exist”
+
+Scenario: Adding a book
+Given there is an admin user connected
+And the admin is on the add book’s form
+When I add a name for the book 
+And I add a qty 
+And I add a description 
+When I press submit button
+Then I should have a success message
+And the library should have a new book
+
+
+
+3. Feature: Edit Book 
+        In order to edit a book 
+        As a admin user
+I need to be able to edit a book 
+        
+Rules:
+- Being connected as an admin user
+- Accessing book list
+- Accessing book page edit form
+
+
+Scenario: user admin edit book 
+Given there is an admin user connected
+And the admin is on the page /list.php
+        And press on button edit for the chosen book
+        When I changed info
+        And I press submit button
+Then I should have this book saved to library
+And get success message
+
+
+4. Feature: Delete Book 
+        In order to delete a book 
+        As a admin user
+I need to be able to delete a book 
+        
+Rules:
+- Being connected as an admin user
+- Accessing book list
+
+
+Scenario: user admin edit book 
+Given there is an admin user connected
+And the admin is on the page /list.php
+        And press on button delete on the chosen book
+Then I should have this book deleted from library
+And get success message
