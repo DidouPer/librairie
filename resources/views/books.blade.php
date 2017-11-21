@@ -10,6 +10,6 @@
         <p> hello world </p>
     </head>
     <body>
-
+      {{dd($books)}}
     </body>
 </html>
