@@ -15,7 +15,6 @@ class CreateBasketsTable extends Migration {
 			$table->integer('baskets_token');
 		});
 	}
-
 	public function down()
 	{
 		Schema::drop('baskets');

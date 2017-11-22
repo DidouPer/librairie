@@ -14,7 +14,7 @@
     <thead>
         <tr>
             <td>ID</td>
-            <!--<td>Date création</td>-->
+            <!--<td>Date création</tds>-->
             <td>User</td>
             <td>Book</td>
             <td>Num Panier</td>
@@ -27,6 +27,8 @@
             <td>{{ $value->users_id }}</td>
             <td>{{ $value->books_id }}</td>
             <td>{{ $value->baskets_token }}</td>
+            <td>{{ $value->pivot->name }}</td>
+            <td>{{ $value->pivot->price }}</td>
         </tr>
     @endforeach
     </tbody>
