@@ -16,9 +16,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/books', function () {
-    return view('books');
-});
+
+Route::resource('book', 'BookController');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 

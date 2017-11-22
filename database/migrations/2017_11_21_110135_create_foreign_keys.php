@@ -26,6 +26,7 @@ class CreateForeignKeys extends Migration {
 	public function down()
 	{
 
+
 		Schema::table('baskets', function(Blueprint $table) {
 			$table->dropForeign('basket_users_id_foreign');
 		});

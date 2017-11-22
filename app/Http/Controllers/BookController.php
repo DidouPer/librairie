@@ -10,13 +10,12 @@ class BookController extends Controller
 {
   public function index()
   {
-
-      return view('books.index');
+      return view('book.index');
   }
 
   public function create(){
     $book=new Book;
-    return view('books.create',compact('book'));
+    return view('book.create',compact('book'));
   }
   public function store(Request $request)
     {
@@ -27,7 +26,58 @@ class BookController extends Controller
             'book_quantity' => $request->get('quantity'),
 
         ]);
-        return redirect(route('books'));
+        return redirect(route('book.index'));
     }
 
-}
+
+
+
+     /**
+      * Display the specified resource.
+      *
+      * @param  int  $id
+      * @return Response
+      */
+     public function show($id)
+     {
+       $book = \App\Book::find($id);
+
+       return view('book.edit', $book);
+     }
+
+     /**
+      * Show the form for editing the specified resource.
+      *
+      * @param  int  $id
+      * @return Response
+      */
+     public function edit($id)
+     {
+       $book = \App\Book::find($id);
+
+       return view('book.edit', ['book' => $book]);
+     }
+
+     /**
+      * Update the specified resource in storage.
+      *
+      * @param  int  $id
+      * @return Response
+      */
+     public function update($id)
+     {
+         //
+     }
+
+     /**
+      * Remove the specified resource from storage.
+      *
+      * @param  int  $id
+      * @return Response
+      */
+     public function destroy($id)
+     {
+         //
+     }
+
+ }
