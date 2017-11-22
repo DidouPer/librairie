@@ -25,5 +25,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/book/create', 'BookController@create')->name('books_create');
-Route::post('/book', 'BookController@store')->name('books.store');
+Route::get('/book/create', 'BookController@create')->name('book_create');
+Route::get('/book', 'BookController@index')->name('book');
+Route::post('/book', 'BookController@store')->name('book_store');
+Route::get('/book/{id}', 'BookController@edit')->name('book_edit');
+Route::put('/book/{id}', 'BookController@update')->name('book_update');

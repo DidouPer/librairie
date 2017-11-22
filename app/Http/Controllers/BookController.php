@@ -10,7 +10,8 @@ class BookController extends Controller
 {
   public function index()
   {
-      return view('book.index');
+      $books = Book::All();
+      return view('book.index',compact('books'));
   }
 
   public function create(){
@@ -26,7 +27,7 @@ class BookController extends Controller
             'book_quantity' => $request->get('quantity'),
 
         ]);
-        return redirect(route('book.index'));
+        return redirect(route('book'));
     }
 
 
@@ -42,7 +43,7 @@ class BookController extends Controller
      {
        $book = \App\Book::find($id);
 
-       return view('book.edit', $book);
+       return view('book.show', ['book' => $book]);
      }
 
      /**
@@ -64,9 +65,15 @@ class BookController extends Controller
       * @param  int  $id
       * @return Response
       */
-     public function update($id)
+     public function update(Request $request,$id)
      {
-         //
+       // validate
+        $book = \App\Book::find($id);
+        $book->book_title = $request->book_title;
+        $book->book_price = $request->book_price;
+        $book->book_quantity = $request->book_quantity;
+        $book->save();
+          return redirect(route('book'));
      }
 
      /**

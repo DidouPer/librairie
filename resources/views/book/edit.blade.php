@@ -19,11 +19,15 @@
     </ul>
 </nav>
 
-{{ Form::model($book, array('route' => array('book.update', $book->id), 'method' => 'PUT')) }}
+{{ Form::model($book, array('route' => array('book_update', $book->id), 'method' => 'PUT')) }}
 
     <div class="form-group">
         {{ Form::label('book_title', 'Book Title') }}
         {{ Form::text('book_title', null, array('class' => 'form-control')) }}
+        {{ Form::label('book_price', 'Book Price') }}
+        {{ Form::text('book_price', null, array('class' => 'form-control')) }}
+        {{ Form::label('book_quantity', 'Book Price') }}
+        {{ Form::text('book_quantity', null, array('class' => 'form-control')) }}
     </div>
 
 

@@ -1,5 +1,5 @@
 <?php
-$route = 'books.store';
+$route = 'book_store';
 $method = 'POST';
 ?>
 
