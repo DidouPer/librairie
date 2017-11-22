@@ -7,7 +7,7 @@ class CreateBookTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('book', function(Blueprint $table) {
+		Schema::create('books', function(Blueprint $table) {
 			$table->increments('id');
 			$table->timestamps();
 			$table->string('book_title', 50);
@@ -17,6 +17,6 @@ class CreateBookTable extends Migration {
 
 	public function down()
 	{
-		Schema::drop('book');
+		Schema::drop('books');
 	}
 }
