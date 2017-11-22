@@ -25,7 +25,7 @@
         <tr>
             <td>{{ $value->id }}</td>
             <td>{{ $value->users_id }}</td>
-            <td>{{ $value->books_id }}</td>
+            <td>{{ $value->book_id }}</td>
             <td>{{ $value->baskets_token }}</td>
             <td>{{ $value->pivot->name }}</td>
             <td>{{ $value->pivot->price }}</td>

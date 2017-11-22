@@ -12,9 +12,9 @@ class Baskets extends Model
     }
 
     public function book(){
-        return $this->belongsToMany('App\Book', 'books_baskets', 'books_id', 'id')
-            ->withPivot('books_title', 'title')
-            ->withPivot('books_price', 'price');
+        return $this->belongsToMany('App\Book', 'books_baskets', 'book_id', 'id')
+            ->withPivot('book_title', 'title')
+            ->withPivot('book_price', 'price');
         ;
     }
 }

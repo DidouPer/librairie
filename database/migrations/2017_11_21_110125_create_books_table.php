@@ -10,9 +10,9 @@ class CreateBooksTable extends Migration {
 		Schema::create('books', function(Blueprint $table) {
 			$table->increments('id');
 			$table->timestamps();
-			$table->string('books_title', 50);
-			$table->float('books_price');
-			$table->integer('books_quantity');
+			$table->string('book_title', 50);
+			$table->float('book_price');
+			$table->integer('book_quantity');
 		});
 	}
 

@@ -11,7 +11,7 @@ class CreateBasketsTable extends Migration {
 			$table->increments('id');
 			$table->timestamps();
 			$table->integer('users_id')->unsigned();
-			$table->integer('books_id')->unsigned();
+			$table->integer('book_id')->unsigned();
 			$table->integer('baskets_token');
 		});
 	}

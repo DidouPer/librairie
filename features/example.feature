@@ -5,7 +5,5 @@ Feature: Laravel Behat Extension
 
   Scenario: Dummy Example
     Given I am on the homepage
-    When I follow "register"
-    Then the url should match "/example"
-    And I should see "It works!"
-    And I should be able to do something with Laravel
+    Then the url should match "/"
+    Then print the current URL$

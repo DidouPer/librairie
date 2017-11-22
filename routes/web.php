@@ -10,9 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/testU', function () {
+    return 'coucou';
+});
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->with('message', 'Vous y êtes !');
 });
 
 Route::resource('book', 'BookController');
@@ -23,10 +26,13 @@ Route::get('/books', function () {
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/baskets', 'BasketsController@index')->name('baskets');
 //Route::get('/basket/create/{id}', 'BasketController@create')->('createbasket');
+Route::get('/book/create', 'BookController@create')->name('book_create');
 Route::get('/book', 'BookController@index')->name('book');
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/book/create', 'BookController@create')->name('books_create');
-Route::post('/book', 'BookController@store')->name('books.store');
+Route::post('/book', 'BookController@store')->name('book_store');
+Route::get('/book/{id}', 'BookController@edit')->name('book_edit');
+Route::put('/book/{id}', 'BookController@update')->name('book_update');
+

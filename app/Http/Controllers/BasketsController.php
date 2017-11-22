@@ -15,7 +15,7 @@ class BasketsController extends Controller {
             $baskets = Baskets::where('users_id', Auth::user()->id)->get();
             //dd(Auth::guest());
             //ssdd(Auth::user()->id);
-            return view('baskets')->with('baskets', $baskets);
+            return view('baskets.index',compact('baskets'));
         }
         else {
             return view('home');

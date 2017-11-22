@@ -24,6 +24,9 @@
         <p>
             <strong>Price:</strong> {{ $book->book_price }}<br>
         </p>
+        <p>
+            <strong>Quantity:</strong> {{ $book->book_quantity }}<br>
+        </p>
     </div>
 
 </div>

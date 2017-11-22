@@ -1,36 +1,44 @@
 <?php
-$route = 'books.store';
+$route = 'book_store';
 $method = 'POST';
 ?>
 
-<div class="tab group-edit">
-		<div id="group" class="tab-pane fade in active">
-			<div class="title">
-				<h3>BOOK</h3>
-			</div>
-			<div class="tab-content">
-				{!! Form::model($book, array('route' => $route, 'method' => $method)) !!}
+	<!DOCTYPE html>
+	<html>
+	<head>
+	    <title>Look! I'm CRUDding</title>
+	    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	</head>
+	<body>
+	<div class="container">
 
-					<div>
-						{!! Form::label('title', 'titre:') !!}
-						{!! Form::text('title') !!}
+	<nav class="navbar navbar-inverse">
+	    <div class="navbar-header">
+	        <a class="navbar-brand" href="{{ URL::to('book') }}">Book Alert</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	        <li><a href="{{ URL::to('book') }}">View All Book</a></li>
+	        <li><a href="{{ URL::to('book/create') }}">Create a Book</a>
+	    </ul>
+	</nav>
 
-					</div>
-          <div>
-						{!! Form::label('price', 'prix:') !!}
-						{!! Form::number('price') !!}
+	{!! Form::model($book, array('route' => $route, 'method' => $method)) !!}
 
-					</div>
-          <div>
-            {!! Form::label('quantity', 'quantité:') !!}
-            {!! Form::number('quantity') !!}
+	    <div class="form-group">
+	        {{ Form::label('title', 'Book Title') }}
+	        {{ Form::text('title', null, array('class' => 'form-control')) }}
+	        {{ Form::label('price', 'Book Price') }}
+	        {{ Form::text('price', null, array('class' => 'form-control')) }}
+	        {{ Form::label('quantity', 'Book Price') }}
+	        {{ Form::text('quantity', null, array('class' => 'form-control')) }}
+	    </div>
 
-          </div>
-					<div class="btn-create">
-						{!! Form::submit() !!}
-					</div>
 
-				{!! Form::close() !!}
-			</div>
-		</div>
+
+	    {{ Form::submit('Ajouter the Book!', array('class' => 'btn btn-primary')) }}
+
+	{{ Form::close() }}
+
 	</div>
+	</body>
+	</html>

@@ -9,11 +9,12 @@
 
 <nav class="navbar navbar-inverse">
     <div class="navbar-header">
-        <a class="navbar-brand" href="{{ URL::to('book') }}">Nerd Alert</a>
+        <a class="navbar-brand" href="{{ URL::to('book') }}">BookAlert</a>
     </div>
     <ul class="nav navbar-nav">
         <li><a href="{{ URL::to('book') }}">View All Books</a></li>
         <li><a href="{{ URL::to('book/create') }}">Create a Book</a>
+
     </ul>
 </nav>
 
@@ -30,16 +31,16 @@
             <td>ID</td>
             <td>book_title</td>
             <td>book_price</td>
-
+            <td>book_quantity</td>
         </tr>
     </thead>
     <tbody>
-    @foreach($book as $key => $value)
+    @foreach($books as $key => $value)
         <tr>
             <td>{{ $value->id }}</td>
-            <td>{{ $value->books_title }}</td>
-            <td>{{ $value->books_price }}</td>
-
+            <td>{{ $value->book_title }}</td>
+            <td>{{ $value->book_price }}</td>
+            <td>{{ $value->book_quantity }}</td>
             <!-- we will also add show, edit, and delete buttons -->
             <td>
 
