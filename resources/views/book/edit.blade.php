@@ -1,5 +1,3 @@
-<!-- app/views/nerds/edit.blade.php -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +24,7 @@
         {{ Form::text('book_title', null, array('class' => 'form-control')) }}
         {{ Form::label('book_price', 'Book Price') }}
         {{ Form::text('book_price', null, array('class' => 'form-control')) }}
-        {{ Form::label('book_quantity', 'Book Price') }}
+        {{ Form::label('book_quantity', 'Book quantity') }}
         {{ Form::text('book_quantity', null, array('class' => 'form-control')) }}
     </div>
 

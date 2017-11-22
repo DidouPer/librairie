@@ -51,6 +51,8 @@
 
                 <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
                 <a class="btn btn-small btn-info" href="{{ URL::to('book/' . $value->id . '/edit') }}">Edit this Book</a>
+                <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
+                <a class="btn btn-small btn-danger" href="{{ URL::to('book/' . $value->id . '/delete') }}">delete this Book</a>
 
             </td>
         </tr>
