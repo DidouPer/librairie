@@ -10,6 +10,7 @@ class BasicTest extends TestCase
 {
   public function testBasicTest()
   {
+  
     $data = 'Je suis petit';
     $this->assertTrue(starts_with($data, 'Je'));
     $this->assertFalse(starts_with($data, 'Tu'));
