@@ -3,18 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Book;
+use Input;
 
 class BookController extends Controller
 {
-  /**
-   * Show a list of all of the application's users.
-   *
-   * @return Response
-   */
   public function index()
   {
-      $books = DB::select('select * from Book', [1]);
 
-      return view('books.index', ['books' => $books]);
+      return view('books.index');
   }
+
+  public function create(){
+    $book=new Book;
+    return view('books.create',compact('book'));
+  }
+  public function store(Request $request)
+    {
+      //dd($request);
+        $book = Book::create([
+            'book_title' => $request->get('title'),
+            'book_price' => $request->get('price'),
+            'book_quantity' => $request->get('quantity'),
+
+        ]);
+        return redirect(route('books'));
+    }
+
 }

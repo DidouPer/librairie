@@ -15,10 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/books', function () {
     return view('books');
 });
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/book/create', 'BookController@create')->name('books_create');
+Route::post('/book', 'BookController@store')->name('books.store');
