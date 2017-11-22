@@ -1,37 +1,37 @@
-<!-- app/views/nerds/edit.blade.php -->
+<?php
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Look! I'm CRUDding</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-</head>
-<body>
-<div class="container">
+$route = 'book_update';
+$method = 'PUT';
+//dd($book);
+?>
 
-<nav class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="{{ URL::to('book') }}">Book Alert</a>
-    </div>
-    <ul class="nav navbar-nav">
-        <li><a href="{{ URL::to('book') }}">View All Book</a></li>
-        <li><a href="{{ URL::to('book/create') }}">Create a Book</a>
-    </ul>
-</nav>
+<div class="tab group-edit">
+		<div id="group" class="tab-pane fade in active">
+			<div class="title">
+				<h3>BOOK</h3>
+			</div>
+			<div class="tab-content">
+				{!! Form::model($book, array('route' => $route, 'method' => $method)) !!}
+					<div>
+						{!! Form::label('book_title', 'titre:') !!}
+						{!! Form::text('book_title') !!}
 
-{{ Form::model($book, array('route' => array('book.update', $book->id), 'method' => 'PUT')) }}
+					</div>
+          <div>
+						{!! Form::label('book_price', 'prix:') !!}
+						{!! Form::number('book_price') !!}
 
-    <div class="form-group">
-        {{ Form::label('book_title', 'Book Title') }}
-        {{ Form::text('book_title', null, array('class' => 'form-control')) }}
-    </div>
+					</div>
+          <div>
+            {!! Form::label('book_quantity', 'quantité:') !!}
+            {!! Form::number('book_quantity') !!}
 
+          </div>
+					<div class="btn-create">
+						{!! Form::submit() !!}
+					</div>
 
-
-    {{ Form::submit('Edit the Book!', array('class' => 'btn btn-primary')) }}
-
-{{ Form::close() }}
-
-</div>
-</body>
-</html>
+				{!! Form::close() !!}
+			</div>
+		</div>
+	</div>

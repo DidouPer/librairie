@@ -10,7 +10,8 @@ class BookController extends Controller
 {
   public function index()
   {
-      return view('book.index');
+      $books=Book::all();
+      return view('book.index', compact('books'));
   }
 
   public function create(){
@@ -21,63 +22,29 @@ class BookController extends Controller
     {
       //dd($request);
         $book = Book::create([
-            'book_title' => $request->get('title'),
-            'book_price' => $request->get('price'),
-            'book_quantity' => $request->get('quantity'),
+            'book_title' => $request->get('book_title'),
+            'book_price' => $request->get('book_price'),
+            'book_quantity' => $request->get('book_quantity'),
 
         ]);
-        return redirect(route('book.index'));
+        return redirect(route('books'));
     }
+    public function edit($id){
+      $book=Book::find($id);
+      return view('book.edit',compact('book'));
+    }
+    public function update(Request $request)
+      {
+        //dd($request);
+          $book = Book::edit([
+              'book_title' => $request->get('book_title'),
+              'book_price' => $request->get('book_price'),
+              'book_quantity' => $request->get('book_quantity'),
+
+          ]);
+          return redirect(route('books'));
+      }
 
 
 
-
-     /**
-      * Display the specified resource.
-      *
-      * @param  int  $id
-      * @return Response
-      */
-     public function show($id)
-     {
-       $book = \App\Book::find($id);
-
-       return view('book.edit', $book);
-     }
-
-     /**
-      * Show the form for editing the specified resource.
-      *
-      * @param  int  $id
-      * @return Response
-      */
-     public function edit($id)
-     {
-       $book = \App\Book::find($id);
-
-       return view('book.edit', ['book' => $book]);
-     }
-
-     /**
-      * Update the specified resource in storage.
-      *
-      * @param  int  $id
-      * @return Response
-      */
-     public function update($id)
-     {
-         //
-     }
-
-     /**
-      * Remove the specified resource from storage.
-      *
-      * @param  int  $id
-      * @return Response
-      */
-     public function destroy($id)
-     {
-         //
-     }
-
- }
+}
