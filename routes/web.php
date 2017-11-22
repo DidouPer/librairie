@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('/books', function () {
     return view('books');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/baskets', 'BasketsController@index')->name('baskets');
+//Route::get('/basket/create/{id}', 'BasketController@create')->('createbasket');
