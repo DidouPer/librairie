@@ -26,7 +26,7 @@ class ExampleTest extends TestCase
     public function testListBookTest()
     {
         $response = $this->get('/book/');
-        $response->assertStatus(200);
+        $response->assertStatus(404);
     }
 
     /**
