@@ -7,16 +7,16 @@ class CreateBookTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('Book', function(Blueprint $table) {
+		Schema::create('books', function(Blueprint $table) {
 			$table->increments('id');
 			$table->timestamps();
 			$table->string('book_title', 50);
 			$table->float('book_price');
+			$table->float('book_quantity');
 		});
 	}
-
 	public function down()
 	{
-		Schema::drop('Book');
+		Schema::drop('books');
 	}
 }
