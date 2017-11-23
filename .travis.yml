@@ -37,7 +37,7 @@ script:
   - php ./phpmd.phar ./app xml rulesets/design.xml
   - php ./vendor/bin/phpcpd ./app
   - ls -la
-  - cd /
+  - chmod +x deploy.sh
   - ./deploy.sh
 
 after_success:
