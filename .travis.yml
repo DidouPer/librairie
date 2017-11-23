@@ -11,7 +11,7 @@ services:
 before_script:
   - cp .env.example .env
   - mysql -e 'create database librairie;'
-  - composer global require "squizlabs/php_codesniffer=*"
+  # - composer global require "squizlabs/php_codesniffer=*"
   - composer global require pragmarx/laravelcs
   - composer global require phploc/phploc
   - composer self-update
@@ -25,8 +25,7 @@ before_script:
 script:
   - phpcs app --colors
   - phpcbf app
-  - php vendor/bin/phpcs app --colors
-  - php vendor/bin/phpcbf app
+  - php vendor/bin/phpcs app
   - php vendor/bin/phpunit --testdox
   - php phpdox.phar
   - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
