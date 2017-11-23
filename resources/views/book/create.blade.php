@@ -29,7 +29,7 @@ $method = 'POST';
 	        {{ Form::text('title', null, array('class' => 'form-control')) }}
 	        {{ Form::label('price', 'Book Price') }}
 	        {{ Form::text('price', null, array('class' => 'form-control')) }}
-	        {{ Form::label('quantity', 'Book Price') }}
+	        {{ Form::label('quantity', 'Book Quantity') }}
 	        {{ Form::text('quantity', null, array('class' => 'form-control')) }}
 	    </div>
 

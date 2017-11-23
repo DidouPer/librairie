@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Http\Controllers\BookController" namespace="App\Http\Controllers" name="BookController" abstract="false" final="false" start="9" end="90">
+  <file path="/var/www/public/librairie/app/Http/Controllers" file="BookController.php" realpath="/var/www/public/librairie/app/Http/Controllers/BookController.php" size="1859" time="2017-11-22T15:18:08+00:00" unixtime="1511363888" sha1="d52701a4995fe306243a7b77cbb76d1cc9e656a7" relative="Http/Controllers/BookController.php"/>
+  <extends full="App\Http\Controllers\Controller" namespace="App\Http\Controllers" name="Controller"/>
+  <method name="index" start="11" end="15" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="create" start="17" end="20" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="store" start="21" end="31" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="request" byreference="false" type="object">
+      <type full="Illuminate\Http\Request" namespace="Illuminate\Http" name="Request"/>
+    </parameter>
+    <inline>
+      <comment value="dd($request);" line="23"/>
+    </inline>
+  </method>
+  <method name="show" start="42" end="47" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Display the specified resource."/>
+      <param type="int" variable="$id"/>
+      <return type="object">
+        <type full="App\Http\Controllers\Response" namespace="App\Http\Controllers" name="Response"/>
+      </return>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="edit" start="55" end="60" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Show the form for editing the specified resource."/>
+      <param type="int" variable="$id"/>
+      <return type="object">
+        <type full="App\Http\Controllers\Response" namespace="App\Http\Controllers" name="Response"/>
+      </return>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="update" start="68" end="77" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Update the specified resource in storage."/>
+      <param type="int" variable="$id"/>
+      <return type="object">
+        <type full="App\Http\Controllers\Response" namespace="App\Http\Controllers" name="Response"/>
+      </return>
+    </docblock>
+    <parameter name="request" byreference="false" type="object">
+      <type full="Illuminate\Http\Request" namespace="Illuminate\Http" name="Request"/>
+    </parameter>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="validate" line="70"/>
+    </inline>
+  </method>
+  <method name="destroy" start="85" end="88" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Remove the specified resource from storage."/>
+      <param type="int" variable="$id"/>
+      <return type="object">
+        <type full="App\Http\Controllers\Response" namespace="App\Http\Controllers" name="Response"/>
+      </return>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+  <parent full="App\Http\Controllers\Controller" namespace="App\Http\Controllers" name="Controller">
+    <extends full="Illuminate\Routing\Controller" namespace="Illuminate\Routing" name="Controller" unresolved="true"/>
+    <uses full="Illuminate\Foundation\Auth\Access\AuthorizesRequests" namespace="Illuminate\Foundation\Auth\Access" name="AuthorizesRequests" unresolved="true"/>
+    <uses full="Illuminate\Foundation\Bus\DispatchesJobs" namespace="Illuminate\Foundation\Bus" name="DispatchesJobs" unresolved="true"/>
+    <uses full="Illuminate\Foundation\Validation\ValidatesRequests" namespace="Illuminate\Foundation\Validation" name="ValidatesRequests" unresolved="true"/>
+  </parent>
+</class>

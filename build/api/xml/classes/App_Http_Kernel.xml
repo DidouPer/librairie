@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Http\Kernel" namespace="App\Http" name="Kernel" abstract="false" final="false" start="7" end="61">
+  <file path="/var/www/public/librairie/app/Http" file="Kernel.php" realpath="/var/www/public/librairie/app/Http/Kernel.php" size="2033" time="2017-08-30T09:55:27+00:00" unixtime="1504086927" sha1="cdf5efe3f0285f2a2c2300e773f8aef1afec8467" relative="Http/Kernel.php"/>
+  <extends full="Illuminate\Foundation\Http\Kernel" namespace="Illuminate\Foundation\Http" name="Kernel" unresolved="true"/>
+  <member name="middleware" type="array" default="" visibility="protected" line="16">
+    <docblock>
+      <description compact="The application's global HTTP middleware stack.">These middleware are run during every request to your application.</description>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="middlewareGroups" type="array" default="" visibility="protected" line="29">
+    <docblock>
+      <description compact="The application's route middleware groups."/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="routeMiddleware" type="array" default="" visibility="protected" line="53">
+    <docblock>
+      <description compact="The application's route middleware.">These middleware may be assigned to groups or used individually.</description>
+      <var type="array"/>
+    </docblock>
+  </member>
+</class>

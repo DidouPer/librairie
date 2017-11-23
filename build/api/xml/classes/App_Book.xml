@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Book" namespace="App" name="Book" abstract="false" final="false" start="6" end="12">
+  <file path="/var/www/public/librairie/app" file="Book.php" realpath="/var/www/public/librairie/app/Book.php" size="173" time="2017-11-22T14:17:16+00:00" unixtime="1511360236" sha1="0921c98fdb0b23b95958944cce7b17f8b94e2e7b" relative="Book.php"/>
+  <extends full="Illuminate\Database\Eloquent\Model" namespace="Illuminate\Database\Eloquent" name="Model" unresolved="true"/>
+  <member name="fillable" type="array" default="" visibility="protected" line="8"/>
+</class>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Http\Controllers\HomeController" namespace="App\Http\Controllers" name="HomeController" abstract="false" final="false" start="7" end="28">
+  <file path="/var/www/public/librairie/app/Http/Controllers" file="HomeController.php" realpath="/var/www/public/librairie/app/Http/Controllers/HomeController.php" size="452" time="2017-11-21T15:55:31+00:00" unixtime="1511279731" sha1="6f6af344e8538ce8eb774314729cbb182a3788de" relative="Http/Controllers/HomeController.php"/>
+  <extends full="App\Http\Controllers\Controller" namespace="App\Http\Controllers" name="Controller"/>
+  <constructor name="__construct" start="14" end="17" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Create a new controller instance."/>
+      <return type="object">
+        <type full="App\Http\Controllers\void" namespace="App\Http\Controllers" name="void"/>
+      </return>
+    </docblock>
+  </constructor>
+  <method name="index" start="24" end="27" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Show the application dashboard."/>
+      <return type="object">
+        <type full="\Illuminate\Http\Response" namespace="\Illuminate\Http" name="Response"/>
+      </return>
+    </docblock>
+  </method>
+  <parent full="App\Http\Controllers\Controller" namespace="App\Http\Controllers" name="Controller">
+    <extends full="Illuminate\Routing\Controller" namespace="Illuminate\Routing" name="Controller" unresolved="true"/>
+    <uses full="Illuminate\Foundation\Auth\Access\AuthorizesRequests" namespace="Illuminate\Foundation\Auth\Access" name="AuthorizesRequests" unresolved="true"/>
+    <uses full="Illuminate\Foundation\Bus\DispatchesJobs" namespace="Illuminate\Foundation\Bus" name="DispatchesJobs" unresolved="true"/>
+    <uses full="Illuminate\Foundation\Validation\ValidatesRequests" namespace="Illuminate\Foundation\Validation" name="ValidatesRequests" unresolved="true"/>
+  </parent>
+</class>
