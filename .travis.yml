@@ -21,11 +21,11 @@ before_script:
   - chmod 777 pdepend.phar
 
 script:
-  # - php phpcs /app --colors
-  # - php phpcbf /app
+  - php phpcs app --colors
+  - php phpcbf app
   - php vendor/bin/phpunit --testdox
   - php phpdox.phar
-  - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg ./app
+  - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
   - open pyramid.svg
 
 notifications:
