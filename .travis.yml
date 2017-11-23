@@ -28,7 +28,7 @@ before_script:
 
 script:
   - php vendor/bin/phpcs --severity=0 app
-  - php vendor/bin/phpcbf app
+  # - php vendor/bin/phpcbf app
   - php vendor/bin/phpunit --testdox
   - php phpdox.phar
   - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
@@ -36,23 +36,25 @@ script:
   - php ./phpmd.phar ./app xml rulesets/codesize.xml
   - php ./phpmd.phar ./app xml rulesets/design.xml
   - php ./vendor/bin/phpcpd ./app
+  - php vendor/bin/behat
 
-  - git config user.name "DidouPer"
-  - git config user.password "Didsd2011"
-  - git status
-  - git add --all
-  - git commit -m "committed"
-  - git push origin preprod
 
   # - ls -la
   # - chmod +x deploy.sh
   # - ./deploy.sh
 
 after_success:
-  - cd ..
-  - ./deploy.sh
+  - git config user.name "DidouPer"
+  - git config user.password "Didsd2011"
+  - git status
+  - git add --all
+  - git commit -m "committed"
+  - git push origin master
+  - git checkout preprod
+  - git pull origin preprod
+  - git push origin preprod
+
   - php rocketeer.phar deploy
-  # - vendor/bin/phploc app
 
 notifications:
   email:
