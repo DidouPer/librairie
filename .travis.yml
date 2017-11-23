@@ -39,7 +39,8 @@ script:
   - php ./phpmd.phar ./app xml rulesets/naming.xml
   - php ./phpmd.phar ./app xml rulesets/design.xml
   - php ./vendor/bin/phpcpd ./app
-  - cd ..
+  - ll
+  - cd /
   - ./deploy.sh
 
 after_success:
