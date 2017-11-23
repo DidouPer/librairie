@@ -27,7 +27,7 @@ before_script:
 
 
 script:
-  - php vendor/bin/phpcs --standard=ruleset.xml -s  severity=0 app  --colors
+  - php vendor/bin/phpcs --standard=ruleset.xml -s severity=0 app
   - php vendor/bin/phpcbf app
   - php vendor/bin/phpunit --testdox
   - php phpdox.phar
@@ -36,9 +36,17 @@ script:
   - php ./phpmd.phar ./app xml rulesets/codesize.xml
   - php ./phpmd.phar ./app xml rulesets/design.xml
   - php ./vendor/bin/phpcpd ./app
-  - ls -la
-  - chmod +x deploy.sh
-  - ./deploy.sh
+
+  - git config user.name "DidouPer"
+  - git config user.password "Didsd2011"
+  - git status
+  - git add --all
+  - git commit -m "committed"
+  - git push origin preprod
+
+  # - ls -la
+  # - chmod +x deploy.sh
+  # - ./deploy.sh
 
 after_success:
   - cd ..
