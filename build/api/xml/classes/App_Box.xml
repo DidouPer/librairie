@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Box" namespace="App" name="Box" abstract="false" final="false" start="4" end="54">
+  <file path="/var/www/public/librairie/app" file="Box.php" realpath="/var/www/public/librairie/app/Box.php" size="928" time="2017-11-22T14:26:39+00:00" unixtime="1511360799" sha1="1e507457ab455135c8a0ea8c630e4f7af6e5cdee" relative="Box.php"/>
+  <member name="items" type="array" default="" visibility="protected" line="9">
+    <docblock>
+      <description/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="16" end="19" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Construct the box with the given items."/>
+      <param type="array" variable="$items"/>
+    </docblock>
+    <parameter name="items" byreference="false" type="array" default=""/>
+  </constructor>
+  <method name="has" start="27" end="30" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Check if the specified item is in the box."/>
+      <param type="string" variable="$item"/>
+      <return type="object">
+        <type full="App\bool" namespace="App" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="item" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="takeOne" start="37" end="40" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Remove an item from the box, or null if the box is empty."/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="startsWith" start="48" end="53" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Retrieve all items from the box that start with the specified letter."/>
+      <param type="string" variable="$letter"/>
+      <return type="array"/>
+    </docblock>
+    <parameter name="letter" byreference="false" type="{unknown}"/>
+  </method>
+</class>

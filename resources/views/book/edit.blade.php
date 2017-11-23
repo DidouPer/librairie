@@ -24,7 +24,7 @@
         {{ Form::text('book_title', null, array('class' => 'form-control')) }}
         {{ Form::label('book_price', 'Book Price') }}
         {{ Form::text('book_price', null, array('class' => 'form-control')) }}
-        {{ Form::label('book_quantity', 'Book quantity') }}
+        {{ Form::label('book_quantity', 'Book Quantity') }}
         {{ Form::text('book_quantity', null, array('class' => 'form-control')) }}
     </div>
 
