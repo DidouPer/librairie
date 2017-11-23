@@ -23,13 +23,14 @@ before_script:
   - chmod 777 pdepend.phar
 
 script:
-  - phpcs app --colors
-  - phpcbf app
+  # - phpcs app --colors
+  # - phpcbf app
   - php vendor/bin/phpcs app
+  - php vendor/bin/phpcbf app
   - php vendor/bin/phpunit --testdox
   - php phpdox.phar
   - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
-  - .composer/vendor/bin/phploc app
+  - php /vendor/bin/phploc app
 
 notifications:
   email:
