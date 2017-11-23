@@ -30,7 +30,7 @@ script:
   - php vendor/bin/phpunit --testdox
   - php phpdox.phar
   - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
-  - php vendor/bin/phploc app
+  - vendor/bin/phploc app
 
 notifications:
   email:
