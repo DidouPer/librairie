@@ -27,7 +27,7 @@ before_script:
 
 
 script:
-  - php vendor/bin/phpcs app
+  - php vendor/bin/phpcs --standard=ruleset.xml -s  severity=0 app  --colors
   - php vendor/bin/phpcbf app
   - php vendor/bin/phpunit --testdox
   - php phpdox.phar
