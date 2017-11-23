@@ -29,11 +29,12 @@ script:
   - php phpdox.phar
   - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
   - php ./vendor/bin/phploc ./app
+  - cd ..
   - ./deploy.sh
 
 after_success:
   - ./deploy.sh
-  - php rocketeer.phar deploy
+  - php rocketeer.phar deploy 
   # - vendor/bin/phploc app
 
 notifications:
