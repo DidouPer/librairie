@@ -7,14 +7,14 @@ php:
 
 sudo: false
 
-# before_script:
-#   - cp .env.ci .env
-#   - composer install --dev --prefer-source --no-interaction
-#   - php artisan key:generate
-#   - php artisan migrate --seed
+before_script:
+  - cp .env.ci .env
+  - composer install --dev --prefer-source --no-interaction
+  - php artisan key:generate
+  - php artisan migrate --seed
 
 script:
-  # - php vendor/bin/phpmd app text codesize design naming unusedcode
+  - php vendor/bin/phpmd app text codesize design naming unusedcode
   - php vendor/bin/phpunit --testdox
 
 notifications:
