@@ -13,7 +13,7 @@ return [
     ],
 
     // The number of releases to keep at all times
-    'keep_releases'  => 1,
+    'keep_releases'  => 5,
 
     // Folders
     ////////////////////////////////////////////////////////////////////
