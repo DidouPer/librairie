@@ -23,13 +23,15 @@ before_script:
   - chmod 777 pdepend.phar
 
 script:
-
   - php vendor/bin/phpcs app
   - php vendor/bin/phpcbf app
   - php vendor/bin/phpunit --testdox
   - php phpdox.phar
   - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
   - php ./vendor/bin/phploc ./app
+
+after_success:
+  - ./deploy.sh
   - php rocketeer.phar deploy
   # - vendor/bin/phploc app
 
