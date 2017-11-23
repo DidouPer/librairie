@@ -8,8 +8,7 @@ php:
 sudo: false
 
 before_script:
-  - cp .env.example .env
-  - composer install --dev --prefer-source --no-interaction
+  - composer install
   - php artisan key:generate
   - php artisan migrate:fresh
 
