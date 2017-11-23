@@ -13,11 +13,20 @@ before_script:
   - mysql -e 'create database librairie;'
   - composer self-update
   - composer install --no-interaction
+  - composer global require "squizlabs/php_codesniffer=*"
+  - cd
+  - wget http://static.pdepend.org/php/latest/pdepend.phar
+  - chmod 777 pdepend.phar
   - php artisan key:generate
   - php artisan migrate:fresh
 
 script:
+  - phpcs /app --colors
+  - phpcbf /app
   - php vendor/bin/phpunit --testdox
+  - php phpdox.phar
+  - ./pdepend.phar --summary-xml=/var/www/summary.xml --jdepend-chart=/var/www/jdepend.svg --overview-pyramid=/var/www/pyramid.svg /var/www/public/librairie/app
+  - open /var/www/pyramid.svg
 
 notifications:
   email:
