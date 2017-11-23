@@ -13,6 +13,7 @@ before_script:
   - mysql -e 'create database librairie;'
   - composer global require "squizlabs/php_codesniffer=*"
   - composer global require pragmarx/laravelcs
+  - composer global require phploc/phploc
   - composer self-update
   - composer install --no-interaction
   - php artisan key:generate
@@ -29,7 +30,7 @@ script:
   - php vendor/bin/phpunit --testdox
   - php phpdox.phar
   - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
-  - open pyramid.svg
+  - .composer/vendor/bin/phploc app
 
 notifications:
   email:
