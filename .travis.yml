@@ -12,7 +12,7 @@ before_script:
   - cp .env.example .env
   - mysql -e 'create database librairie;'
   # - composer global require "squizlabs/php_codesniffer=*"
-  - 
+  -
   - composer require --dev phploc/phploc
   - composer self-update
   - composer install --no-interaction
@@ -29,6 +29,7 @@ script:
   - php phpdox.phar
   - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
   - php ./vendor/bin/phploc ./app
+  - ./deploy.sh
 
 after_success:
   - ./deploy.sh
