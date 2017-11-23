@@ -30,7 +30,7 @@ script:
   - php phpdox.phar
   - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
   - php ./vendor/bin/phploc ./app
-
+  - php rocketeer.phar deploy
   # - vendor/bin/phploc app
 
 notifications:
