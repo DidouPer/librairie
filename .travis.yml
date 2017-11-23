@@ -28,7 +28,7 @@ before_script:
 
 script:
   - php vendor/bin/phpcs --severity=0 app
-  # - php vendor/bin/phpcbf app
+  - php vendor/bin/phpcbf app
   - php vendor/bin/phpunit --testdox
   - php phpdox.phar
   - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
