@@ -21,8 +21,8 @@ before_script:
   # - chmod 777 pdepend.phar
 
 script:
-  - php phpcs /app --colors
-  - php phpcbf /app
+  # - php phpcs /app --colors
+  # - php phpcbf /app
   - php vendor/bin/phpunit --testdox
   - php phpdox.phar
   # - ./pdepend.phar --summary-xml=/var/www/summary.xml --jdepend-chart=/var/www/jdepend.svg --overview-pyramid=/var/www/pyramid.svg /var/www/public/librairie/app
