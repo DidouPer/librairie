@@ -15,7 +15,7 @@ sudo: false
 
 script:
   # - php vendor/bin/phpmd app text codesize design naming unusedcode
-  - php vendor/bin/phpunit --testdox --coverage-text tests
+  - php vendor/bin/phpunit --testdox
 
 notifications:
   email:
