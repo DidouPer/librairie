@@ -1,0 +1,54 @@
+language: php
+
+php:
+  # - '5.6'
+  - '7.0'
+  # - '7.1'
+
+services:
+- mysql
+
+before_script:
+  - cp .env.example .env
+  - mysql -e 'create database librairie;'
+  - composer require --dev phploc/phploc
+  - composer require --dev sebastian/phpcpd
+  - composer self-update
+  - composer install --no-interaction
+  - php artisan key:generate
+  - php artisan migrate:fresh
+  # - cd
+  - wget http://static.pdepend.org/php/latest/pdepend.phar
+  - chmod 777 pdepend.phar
+  - wget -c http://static.phpmd.org/php/latest/phpmd.phar
+  - chmod 777 phpmd.phar
+
+
+script:
+  - php vendor/bin/phpcs --severity=0 app
+  #- php vendor/bin/phpcbf app
+  - php vendor/bin/phpunit --testdox
+  - php phpdox.phar
+  - php pdepend.phar --summary-xml=summary.xml --jdepend-chart=jdepend.svg --overview-pyramid=pyramid.svg app
+  - php ./vendor/bin/phploc ./app
+  - php ./phpmd.phar ./app xml rulesets/codesize.xml
+  - php ./phpmd.phar ./app xml rulesets/design.xml
+  - php ./vendor/bin/phpcpd ./app
+  - php vendor/bin/behat
+
+
+  # - ls -la
+  # - chmod +x deploy.sh
+  # - ./deploy.sh
+
+after_success:
+  - chmod +x deploy.sh
+  - ./deploy.sh
+  - php rocketeer.phar deploy
+
+notifications:
+  email:
+    recipients:
+      - johann.creneguy@gmail.com
+    on_success: always
+    on_failure: always

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Http\Controllers\Controller" namespace="App\Http\Controllers" name="Controller" abstract="false" final="false" start="10" end="14">
+  <file path="/var/www/public/librairie/app/Http/Controllers" file="Controller.php" realpath="/var/www/public/librairie/app/Http/Controllers/Controller.php" size="362" time="2017-11-21T15:20:11+00:00" unixtime="1511277611" sha1="6d487325c9d11cd38dbfd0c3080a3185068994d1" relative="Http/Controllers/Controller.php"/>
+  <extends full="Illuminate\Routing\Controller" namespace="Illuminate\Routing" name="Controller" unresolved="true"/>
+  <uses full="Illuminate\Foundation\Auth\Access\AuthorizesRequests" namespace="Illuminate\Foundation\Auth\Access" name="AuthorizesRequests" start="12" end="12" unresolved="true"/>
+  <uses full="Illuminate\Foundation\Bus\DispatchesJobs" namespace="Illuminate\Foundation\Bus" name="DispatchesJobs" start="12" end="12" unresolved="true"/>
+  <uses full="Illuminate\Foundation\Validation\ValidatesRequests" namespace="Illuminate\Foundation\Validation" name="ValidatesRequests" start="12" end="12" unresolved="true"/>
+  <extenders>
+    <extender full="App\Http\Controllers\Auth\ForgotPasswordController" namespace="App\Http\Controllers\Auth" name="ForgotPasswordController"/>
+    <extender full="App\Http\Controllers\Auth\LoginController" namespace="App\Http\Controllers\Auth" name="LoginController"/>
+    <extender full="App\Http\Controllers\Auth\RegisterController" namespace="App\Http\Controllers\Auth" name="RegisterController"/>
+    <extender full="App\Http\Controllers\Auth\ResetPasswordController" namespace="App\Http\Controllers\Auth" name="ResetPasswordController"/>
+    <extender full="App\Http\Controllers\BookController" namespace="App\Http\Controllers" name="BookController"/>
+    <extender full="App\Http\Controllers\HomeController" namespace="App\Http\Controllers" name="HomeController"/>
+  </extenders>
+</class>

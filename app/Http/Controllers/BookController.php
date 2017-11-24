@@ -84,7 +84,11 @@ class BookController extends Controller
       */
      public function destroy($id)
      {
-         //
+       Book::destroy($id);
+     return redirect(route('book'));
+
+
+
      }
 
  }

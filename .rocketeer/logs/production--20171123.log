@@ -1,0 +1,258 @@
+20171123111334
+20171123112133
+/usr/bin/git
+/usr/bin/git
+$ /usr/bin/git clone "https://DidouPer:Didsd2011@github.com/DidouPer/librairie.git" "/var/www/html/librairie/releases/20171123131610" --branch="master" --depth="1"
+/usr/bin/git clone "https://DidouPer:Didsd2011@github.com/DidouPer/librairie.git" "/var/www/html/librairie/releases/20171123131610" --branch="master" --depth="1"
+Clonage dans '/var/www/html/librairie/releases/20171123131610'...
+/usr/bin/git
+/usr/bin/git
+$ cd /var/www/html/librairie/releases/20171123131610
+$ /usr/bin/git submodule update --init --recursive
+cd /var/www/html/librairie/releases/20171123131610
+/usr/bin/git submodule update --init --recursive
+
+
+/usr/local/bin/composer
+$ cd /var/www/html/librairie/releases/20171123131610
+$ /usr/local/bin/composer install --no-interaction --no-dev --prefer-dist
+cd /var/www/html/librairie/releases/20171123131610
+/usr/local/bin/composer install --no-interaction --no-dev --prefer-dist
+Do not run Composer as root/super user! See https://getcomposer.org/root for details
+Loading composer repositories with package information
+Installing dependencies from lock file
+Package operations: 40 installs, 0 updates, 0 removals
+    Failed to download doctrine/inflector from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing doctrine/inflector (v1.2.0): Cloning e11d84c6e0 from cache
+    Failed to download doctrine/lexer from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing doctrine/lexer (v1.0.1): Cloning 83893c552f from cache
+    Failed to download erusev/parsedown from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing erusev/parsedown (1.6.4): Cloning fbe3fe878f from cache
+    Failed to download vlucas/phpdotenv from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing vlucas/phpdotenv (v2.4.0): Cloning 3cc116adbe from cache
+    Failed to download symfony/css-selector from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/css-selector (v3.3.13): Cloning 66e6e04603 from cache
+    Failed to download tijsverkoyen/css-to-inline-styles from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing tijsverkoyen/css-to-inline-styles (2.2.0): Cloning ab03919dfd from cache
+    Failed to download symfony/polyfill-mbstring from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/polyfill-mbstring (v1.6.0): Cloning 2ec8b39c38 from cache
+    Failed to download symfony/var-dumper from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/var-dumper (v3.3.13): Cloning 805de6bd68 from cache
+    Failed to download symfony/routing from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/routing (v3.3.13): Cloning cf7fa1dfcf from cache
+    Failed to download symfony/process from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/process (v3.3.13): Cloning a56a3989fb from cache
+    Failed to download symfony/http-foundation from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/http-foundation (v3.3.13): Cloning 5943f0f198 from cache
+    Failed to download symfony/event-dispatcher from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/event-dispatcher (v3.3.13): Cloning 271d8c27c3 from cache
+    Failed to download psr/log from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing psr/log (1.0.2): Cloning 4ebe3a8bf7 from cache
+    Failed to download symfony/debug from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/debug (v3.3.13): Cloning 74557880e2 from cache
+    Failed to download symfony/http-kernel from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/http-kernel (v3.3.13): Cloning a2a942172b from cache
+    Failed to download symfony/finder from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/finder (v3.3.13): Cloning 138af5ec07 from cache
+    Failed to download symfony/console from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/console (v3.3.13): Cloning 63cd7960a0 from cache
+    Failed to download egulias/email-validator from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing egulias/email-validator (2.1.3): Cloning 1bec00a100 from cache
+    Failed to download swiftmailer/swiftmailer from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing swiftmailer/swiftmailer (v6.0.2): Cloning 412333372f from cache
+    Failed to download paragonie/random_compat from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing paragonie/random_compat (v2.0.11): Cloning 5da4d3c796 from cache
+    Failed to download ramsey/uuid from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing ramsey/uuid (3.7.1): Cloning 45cffe8220 from cache
+    Failed to download psr/simple-cache from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing psr/simple-cache (1.0.0): Cloning 753fa598e8 from cache
+    Failed to download psr/container from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing psr/container (1.0.0): Cloning b7ce3b1764 from cache
+    Failed to download symfony/translation from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing symfony/translation (v3.3.13): Cloning 373e553477 from cache
+    Failed to download nesbot/carbon from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing nesbot/carbon (1.22.1): Cloning 7cdf42c0b1 from cache
+    Failed to download mtdowling/cron-expression from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing mtdowling/cron-expression (v1.2.1): Cloning 9504fa9ea6 from cache
+    Failed to download monolog/monolog from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing monolog/monolog (1.23.0): Cloning fd8c787753 from cache
+    Failed to download league/flysystem from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing league/flysystem (1.0.41): Cloning f400aa9891 from cache
+    Failed to download laravel/framework from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing laravel/framework (v5.5.21): Cloning 6321069a75 from cache
+    Failed to download fideloper/proxy from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing fideloper/proxy (3.3.4): Cloning 9cdf6f118a from cache
+    Failed to download jakub-onderka/php-console-color from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing jakub-onderka/php-console-color (0.1): Cloning e0b393dacf from cache
+    Failed to download nikic/php-parser from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing nikic/php-parser (v3.1.2): Cloning 08131e7ff2 from cache
+    Failed to download jakub-onderka/php-console-highlighter from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing jakub-onderka/php-console-highlighter (v0.3.2): Cloning 7daa75df45 from cache
+    Failed to download dnoegel/php-xdg-base-dir from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing dnoegel/php-xdg-base-dir (0.1): Cloning 265b859349 from cache
+    Failed to download psy/psysh from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing psy/psysh (v0.8.15): Cloning b1d289c2cb from cache
+    Failed to download laravel/tinker from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing laravel/tinker (v1.0.2): Cloning 203978fd67 from cache
+    Failed to download laravelcollective/html from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing laravelcollective/html (v5.5.1): Cloning 2f6dc39ab3 from cache
+    Failed to download phar-io/version from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing phar-io/version (1.0.1): Cloning a70c0ced4b from cache
+    Failed to download phar-io/manifest from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing phar-io/manifest (1.0.1): Cloning 2df402786a from cache
+    Failed to download squizlabs/php_codesniffer from dist: The zip extension and unzip command are both missing, skipping.
+The php.ini used by your command-line PHP is: /etc/php/7.0/cli/php.ini
+    Now trying to download from source
+  - Installing squizlabs/php_codesniffer (3.1.1): Cloning d667e245d5 from cache
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> php artisan package:discover
+Discovered Package: fideloper/proxy
+Discovered Package: laravel/tinker
+Discovered Package: laravelcollective/html
+Package manifest generated successfully.
+
+$ cd /var/www/html/librairie/releases/20171123131610
+$ npm install
+cd /var/www/html/librairie/releases/20171123131610
+npm install
+bash: npm: command not found
+
+
+$ rm -rf /var/www/html/librairie/releases/20171123131610/storage/logs
+rm -rf /var/www/html/librairie/releases/20171123131610/storage/logs
+
+$ ln -s /var/www/html/librairie/shared/storage/logs /var/www/html/librairie/releases/20171123131610/storage/logs-temp
+$ mv -Tf /var/www/html/librairie/releases/20171123131610/storage/logs-temp /var/www/html/librairie/releases/20171123131610/storage/logs
+ln -s /var/www/html/librairie/shared/storage/logs /var/www/html/librairie/releases/20171123131610/storage/logs-temp
+mv -Tf /var/www/html/librairie/releases/20171123131610/storage/logs-temp /var/www/html/librairie/releases/20171123131610/storage/logs
+
+$ cd /var/www/html/librairie/releases/20171123131610
+$ chmod -R 755 /var/www/html/librairie/releases/20171123131610/app/database/production.sqlite
+$ chmod -R g+s /var/www/html/librairie/releases/20171123131610/app/database/production.sqlite
+$ chown -R www-data:www-data /var/www/html/librairie/releases/20171123131610/app/database/production.sqlite
+cd /var/www/html/librairie/releases/20171123131610
+chmod -R 755 /var/www/html/librairie/releases/20171123131610/app/database/production.sqlite
+chmod -R g+s /var/www/html/librairie/releases/20171123131610/app/database/production.sqlite
+chown -R www-data:www-data /var/www/html/librairie/releases/20171123131610/app/database/production.sqlite
+chmod: cannot access ‘/var/www/html/librairie/releases/20171123131610/app/database/production.sqlite’: No such file or directory
+$ cd /var/www/html/librairie/releases/20171123131610
+$ chmod -R 755 /var/www/html/librairie/releases/20171123131610/storage
+$ chmod -R g+s /var/www/html/librairie/releases/20171123131610/storage
+$ chown -R www-data:www-data /var/www/html/librairie/releases/20171123131610/storage
+cd /var/www/html/librairie/releases/20171123131610
+chmod -R 755 /var/www/html/librairie/releases/20171123131610/storage
+chmod -R g+s /var/www/html/librairie/releases/20171123131610/storage
+chown -R www-data:www-data /var/www/html/librairie/releases/20171123131610/storage
+
+$ cd /var/www/html/librairie/releases/20171123131610
+$ chmod -R 755 /var/www/html/librairie/releases/20171123131610/public
+$ chmod -R g+s /var/www/html/librairie/releases/20171123131610/public
+$ chown -R www-data:www-data /var/www/html/librairie/releases/20171123131610/public
+cd /var/www/html/librairie/releases/20171123131610
+chmod -R 755 /var/www/html/librairie/releases/20171123131610/public
+chmod -R g+s /var/www/html/librairie/releases/20171123131610/public
+chown -R www-data:www-data /var/www/html/librairie/releases/20171123131610/public
+
+$ ln -s /var/www/html/librairie/releases/20171123131610 /var/www/html/librairie/current-temp
+$ mv -Tf /var/www/html/librairie/current-temp /var/www/html/librairie/current
+ln -s /var/www/html/librairie/releases/20171123131610 /var/www/html/librairie/current-temp
+mv -Tf /var/www/html/librairie/current-temp /var/www/html/librairie/current
+
+$ cd /var/www/html/librairie/releases/20171123131610
+$ php artisan migrate:fresh
+cd /var/www/html/librairie/releases/20171123131610
+php artisan migrate:fresh
+**************************************
+*     Application In Production!     *
+**************************************
+
+Command Cancelled!
+$ cd /var/www/html/librairie/releases/20171123131610
+$ php artisan up
+cd /var/www/html/librairie/releases/20171123131610
+php artisan up
+Application is now live.
+|=> Successfully deployed release 20171123131610
+$ rm -rf /var/www/html/librairie/releases/20171123111334
+rm -rf /var/www/html/librairie/releases/20171123111334
+
+|=> Removing <info>1 release</info> from the server
