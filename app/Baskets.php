@@ -6,15 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Baskets extends Model
 {
-    public function user()
+    protected $table = 'baskets';
+    public $timestamps = true;
+
+    public function isOrderedBy()
     {
-        return $this->belongsTo('App\User', 'user_baskets', 'users_id', 'id');
+        return $this->belongsTo('User', 'id');
     }
 
-    public function book(){
-        return $this->belongsToMany('App\Book', 'books_baskets', 'book_id', 'id')
-            ->withPivot('book_title', 'title')
-            ->withPivot('book_price', 'price');
-        ;
+    public function orderedWhat()
+    {
+        return $this->belongsToMany('Book', 'id');
     }
+
 }

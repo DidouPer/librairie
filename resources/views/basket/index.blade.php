@@ -21,6 +21,7 @@
         </tr>
     </thead>
     <tbody>
+    {{{ dd($baskets) }}}
     @foreach($baskets as $key => $value)
         <tr>
             <td>{{ $value->id }}</td>

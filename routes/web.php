@@ -28,7 +28,9 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/baskets', 'BasketsController@index')->name('baskets');
+Route::get('/basket', 'BasketsController@index')->name('baskets');
+Route::get('/basket/create', 'BasketsController@create')->name('baskets_create');
+Route::post('/basket/store', 'BasketsController@store')->name('basket_store');
 //Route::get('/basket/create/{id}', 'BasketController@create')->('createbasket');
 Route::get('/book/create', 'BookController@create')->name('book_create');
 Route::get('/book', 'BookController@index')->name('book');
